@@ -6,6 +6,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+# a. Implement your own k-means algorithm from the lecture slides using Python. (10 points)
+# b. Using the k-means algorithm, cluster the data from the attached file cluster_data.txt.
+# Plot X, Y coordinates for the entire dataset. Use different symbols and colors to represent your
+# data points for different clusters.
+# Label X and Y axis as 'Length' and 'Width', correspondingly. Label each cluster as “Cluster 1”,
+# “Cluster 2”, etc. Explain your findings. (5 points)
+
 class KMeansClustering:
 
     def __init__(self, data_file, num_iterations, k):
