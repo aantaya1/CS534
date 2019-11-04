@@ -21,9 +21,6 @@ class ChronicKidneyDiseaseClassification:
         self.data = self.load_data()
         train_data, target = self.prepare_data()
 
-        # todo: for testing only
-        train_data.to_csv(r'pandas.txt', header=None, index=None, sep=' ', mode='a')
-
         self.data_train, self.data_test, self.target_train, self.target_test = train_test_split(
             train_data, target, random_state=0, train_size=0.8)
 
@@ -81,7 +78,7 @@ class ChronicKidneyDiseaseClassification:
         # Classification
         df[24] = df[24].map({'ckd': int(1), 'notckd': int(0)})
 
-        # Note: Replace unknown values with column mean
+        # Replace unknown values with column mean
         for key in df.keys():
             if int(key) > 23:
                 continue

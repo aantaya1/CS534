@@ -6,6 +6,22 @@ from sklearn.metrics import confusion_matrix, fowlkes_mallows_score
 from sklearn.model_selection import train_test_split
 from sklearn.utils.multiclass import unique_labels
 
+# Apply three clustering techniques to the handwritten digits dataset. Assume that k = 10. (25
+# points)
+# a. K-means clustering (implemented in Problem 1).
+# b. Agglomerative clustering with Ward linkage (sklearn.cluster.AgglomerativeClustering).
+# c. Affinity Propagation (sklearn.cluster.AffinityPropagation).
+# The dataset you will be working with is the handwritten digits and the details can be found here.
+# Assess all three clustering algorithms using the following protocol:
+# i. Each cluster should be defined by the digit that represents the majority of the current cluster.
+# For examples, if in the second cluster, there are 60 data points of digit “5”, 40 of “3” and 25 of
+# “2”, the cluster is labeled as “5”.
+# ii. Report the 10x10 confusion matrix by comparing the predicted clusters with the actual labels
+# of the datasets. If the clustering procedure resulted in less than 10 clusters, output “-1” in the
+# position to the missing clusters in the confusion matrix.
+# iii. Calculate the accuracy of each clustering method using the Fowlkes-Mallows index
+# (sklearn.metrics.fowlkes_mallows_score).
+
 
 class Clustering:
 
