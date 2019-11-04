@@ -1,11 +1,10 @@
-from sklearn.datasets import load_digits
-from sklearn.cluster import KMeans, AgglomerativeClustering, AffinityPropagation
-from sklearn.metrics import confusion_matrix, fowlkes_mallows_score
-from sklearn.decomposition import PCA
-from sklearn.utils.multiclass import unique_labels
-from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.cluster import KMeans, AgglomerativeClustering, AffinityPropagation
+from sklearn.datasets import load_digits
+from sklearn.metrics import confusion_matrix, fowlkes_mallows_score
+from sklearn.model_selection import train_test_split
+from sklearn.utils.multiclass import unique_labels
 
 
 class Clustering:
@@ -38,7 +37,7 @@ class Clustering:
         affinity_propagation = AffinityPropagation(damping=0.99)
         target_prediction = affinity_propagation.fit(self.data_train).predict(self.data_test)
 
-        print("Target Prediction: \n" + str(target_prediction))
+        print("Target Prediction Affinity Propagation: \n" + str(target_prediction))
 
         #todo uncomment
         # self.plot_confusion_matrix(self.target_test, target_prediction, classes=self.digits.target_names,
