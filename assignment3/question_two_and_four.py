@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 import numpy as np
+from sklearn.preprocessing import scale
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
 from sklearn.svm import SVC
@@ -101,14 +102,26 @@ class ChronicKidneyDiseaseClassification:
 
         return df, target_classifications
 
-    def standardize_data(self):
-        pass
+    def apply_logistic_regression(self, standardized=True):
+        logistic_classifier = LogisticRegressionClassifier()
 
-    def regularize_data(self):
-        pass
+        if standardized:
+            logistic_classifier.fit(scale(self.data_train.to_numpy()), self.target_train.to_numpy())
+        else:
+            logistic_classifier.fit(self.data_train.to_numpy(), self.target_train.to_numpy())
 
-    def apply_logistic_regression(self, regularization=True):
-        pass
+        test_predicted = logistic_classifier.predict(self.data_test.to_numpy())
+        train_predicted = logistic_classifier.predict(self.data_train.to_numpy())
+
+        test_score = f1_score(self.target_test, test_predicted)
+        train_score = f1_score(self.target_train, train_predicted)
+
+        if not standardized:
+            print("Logistic Regression F-Measure Score (train): " + str(train_score))
+            print("Logistic Regression F-Measure Score (test): " + str(test_score))
+        else:
+            print("Logistic Regression Standardized F-Measure Score (train): " + str(train_score))
+            print("Logistic Regression Standardized F-Measure Score (test): " + str(test_score))
 
     def apply_linear_svm(self):
         svc = SVC(kernel='linear').fit(self.data_train.to_numpy(), self.target_train.to_numpy())
@@ -146,8 +159,37 @@ class ChronicKidneyDiseaseClassification:
         print("Random Forest Classifier F-Measure Score (test): " + str(test_score))
 
 
+class LogisticRegressionClassifier:
+
+    @staticmethod
+    def logistic_function(z):
+        return 1 / (1 + np.exp(-z))
+
+    def fit(self, feature_vectors, target_classification):
+        intercept = np.ones((feature_vectors.shape[0], 1))
+        feature_vectors = np.concatenate((intercept, feature_vectors), axis=1)
+
+        # weight matrix
+        self.theta = np.zeros(feature_vectors.shape[1])
+
+        # 500,000 steps
+        for i in range(100000):
+            z = np.dot(feature_vectors, self.theta)
+            h = self.logistic_function(z)
+            gradient = np.dot(feature_vectors.T, (h - target_classification)) / target_classification.size
+            # Learning rate rate = 0.1
+            self.theta -= 0.01 * gradient
+
+    def predict(self, X):
+        intercept = np.ones((X.shape[0], 1))
+        X = np.concatenate((intercept, X), axis=1)
+        return self.logistic_function(np.dot(X, self.theta)) >= 0.5
+
+
 if __name__ == '__main__':
     classifier = ChronicKidneyDiseaseClassification()
-    classifier.apply_linear_svm()
-    classifier.apply_rbf_svm()
-    classifier.apply_random_forest()
+    classifier.apply_logistic_regression(standardized=False)
+    classifier.apply_logistic_regression(standardized=True)
+    # classifier.apply_linear_svm()
+    # classifier.apply_rbf_svm()
+    # classifier.apply_random_forest()

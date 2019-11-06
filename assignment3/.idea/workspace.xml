@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca1d2c0-e35d-40d3-aa45-69020789b3e7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/np.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/question_three.py" beforeDir="false" afterPath="$PROJECT_DIR$/question_three.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/question_two_and_four.py" beforeDir="false" afterPath="$PROJECT_DIR$/question_two_and_four.py" afterDir="false" />
     </list>
@@ -35,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="question_three.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="question_three.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/question_three.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="71" lean-forward="true" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+            <state relative-caret-position="24">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -47,13 +50,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="question_two_and_four.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="question_two_and_four.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/question_two_and_four.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#3501#3940#0" />
+                <element signature="e#4450#5056#0" />
               </folding>
             </state>
           </provider>
@@ -73,6 +78,7 @@
       <find>?</find>
       <find>4.8</find>
       <find>5800</find>
+      <find>__loss</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,14 +89,14 @@
       <list>
         <option value="$PROJECT_DIR$/question_two.py" />
         <option value="$PROJECT_DIR$/question_one.py" />
-        <option value="$PROJECT_DIR$/temp.py" />
         <option value="$PROJECT_DIR$/temp2.py" />
-        <option value="$PROJECT_DIR$/question_three.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
         <option value="$PROJECT_DIR$/question_two_and_four.py" />
+        <option value="$PROJECT_DIR$/question_three.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-5" />
     <option name="width" value="620" />
     <option name="height" value="365" />
@@ -152,10 +158,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1231" height="733" extended-state="7" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1231" height="733" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23662208" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.115384616" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50083613" side_tool="true" weight="0.65625" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298611" />
@@ -163,7 +168,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.5052083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49916387" weight="0.7881944" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49916387" visible="true" weight="0.7881944" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -223,13 +228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/tensor_env/Lib/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
@@ -244,16 +242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/question_three.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="71" lean-forward="true" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/question_one.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -264,12 +252,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="221" column="36" selection-start-line="221" selection-start-column="36" selection-end-line="221" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/np.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pandas.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2601" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cluster_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3111" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/question_two_and_four.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#3501#3940#0" />
+            <element signature="e#4450#5056#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question_three.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

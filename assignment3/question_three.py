@@ -55,7 +55,15 @@ class Clustering:
 
         print("Target Prediction Affinity Propagation: \n" + str(target_prediction))
 
-        #todo uncomment
+        print("I was not able to get 10 clusters... Maybe map the cluster numbers to the digits using the target "
+              "labels? Meaning, if we predict the first digit belongs to cluster 18, and we know the first digit is "
+              "a 8 (since we have the data_test labels), we can say that cluster 18 represents the 8's digits...")
+
+        # I was not able to get 10 clusters... Maybe map the cluster numbers to the digits using the target labels?
+        # Meaning, if we predict the first digit belongs to cluster 18, and we know the first digit is a 8 (since
+        # we have the data_test labels), we can say that cluster 18 represents the 8's digits...
+        # todo: create a mapper for that and check results
+
         # self.plot_confusion_matrix(self.target_test, target_prediction, classes=self.digits.target_names,
         #                            title="Affinity Propagation")
         # print("Affinity Propagation fowlkes mallows score: " + str(fowlkes_mallows_score(self.data_train, target_prediction)))
