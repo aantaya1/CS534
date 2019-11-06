@@ -162,3 +162,7 @@ class KMeansClustering:
 
 if __name__ == '__main__':
     KMeansClustering('cluster_data.txt', num_iterations=2, k=2).apply()
+    print("I found that the the algorithm did a good job of identifying the two clusters. When you set K to a number "
+          "that is not 2, such as 3 or 4, the algorithm fails to cluster corretly (since there are obviously two"
+          "clusters here). In the future we could implement an algorithm that automatically calculates K by finding "
+          "the 'elbow' in the plot of variance with respect to K.")
