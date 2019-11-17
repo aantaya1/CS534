@@ -188,8 +188,8 @@ class LogisticRegressionClassifier:
 
 if __name__ == '__main__':
     classifier = ChronicKidneyDiseaseClassification()
-    classifier.apply_logistic_regression(standardized=False)
-    classifier.apply_logistic_regression(standardized=True)
+    # classifier.apply_logistic_regression(standardized=False)
+    # classifier.apply_logistic_regression(standardized=True)
     classifier.apply_linear_svm()
     classifier.apply_rbf_svm()
     classifier.apply_random_forest()
